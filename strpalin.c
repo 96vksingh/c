@@ -1,22 +1,21 @@
 #include<stdio.h>
 #include<string.h>     //header files
-main()
+int main()
 {
-  char ch[30];
-  int i=0,j,p,k=0,t=0,g=0,u=0;
+  char ch[30],b[0];   int i=0,j,p,k=0,t=0,g=0,u=0,a=0;
   printf("\nENTER THE STRING-");
   gets(ch);
   ch[strlen(ch)]=' ';
-  //printf("STRING IS-%s",ch);
  for(p=0;p<=strlen(ch)+1;p++)
   {
     if(ch[p]==' ')
      {
        for(j=1;j<=k;j++)
         {
-    //      printf("\nChecking-----j=%d...&..k=%d...&..u=%d....&....t=%d........char[%d]=%c....&char[%d]=%c",j,k,u,t-1,u,ch[u],t-1,ch[t-1]);
             if(ch[u]==ch[t-1])
-                i++;
+                {i++;
+                //  b[a]=ch[u];
+                }
             u++;
             t--;
         }
@@ -26,6 +25,7 @@ main()
             ++u;
             t=u;
             i=0;
+            a++;
      }
      else
      {
@@ -33,5 +33,8 @@ main()
       t++;
      }
   }
-   printf("\nSentence IS %d PALINDROME ",g);
+  // for(k=0;k<a;k++)
+   //printf("%d PALINdrome of sentence is-%s ",a,b[a]);
+   printf("\nSentence haS %d PALINDROME ",g);
+   return 0;
  }
